@@ -2,6 +2,9 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
+import TriviaGame from "./components/TriviaGame";
+import DateInfo from "./components/DateInfo";
+import Facts from "./components/Facts";
 import './App.css'
 
 function App() {
@@ -10,16 +13,9 @@ function App() {
   return (
     <>
       <h1>Trivia Diva</h1>
-      <h2>Today's fun fact:</h2>
+      <Facts />
       <div className="fact-container">
-        <div className="fact-box">
-          <h3>Today</h3>
-          <p>content</p>
-        </div>
-        <div className="fact-box">
-          <h3>Trivia</h3>
-          <p>More fact content.</p>
-        </div>
+        <DateInfo />
       </div>
       <section id="center">
         <div className="hero">
