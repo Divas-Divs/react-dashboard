@@ -12,8 +12,14 @@ function App() {
       <h1>Trivia Diva</h1>
       <h2>Today's fun fact:</h2>
       <div className="fact-container">
-        <div className="fact-box">Placeholder fact 1</div>
-        <div className="fact-box">Placeholder fact 2</div>
+        <div className="fact-box">
+          <h3>Today</h3>
+          <p>content</p>
+        </div>
+        <div className="fact-box">
+          <h3>Trivia</h3>
+          <p>More fact content.</p>
+        </div>
       </div>
       <section id="center">
         <div className="hero">
