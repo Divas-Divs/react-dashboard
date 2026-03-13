@@ -73,7 +73,7 @@ h2 {
 h1 {
   font-size: 56px;
   letter-spacing: -1.68px;
-  margin: 64px 0 32px;
+  margin: 56px 0 32px;
   padding: 24px 32px;
   background: #f9a8d4;
   border-bottom: 5px solid #e879a0;
@@ -81,7 +81,6 @@ h1 {
   text-align: left;
   width: 100%;
   box-sizing: border-box;
-  border-radius: 12px;
 
   @media (max-width: 1024px) {
     font-size: 36px;
@@ -91,14 +90,50 @@ h1 {
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 28px;
   line-height: 118%;
   letter-spacing: -0.24px;
-  margin: 0 0 8px;
+  margin: 0 auto 8px;
+  padding: 12px 28px;
+  width: fit-content;
+  border-radius: 12px;
+  background: #f9a8d4;
+  border-bottom: 5px solid #e879a0;
+  box-shadow: 0 5px 0 #A76D88;
+  text-align: center;
+
   @media (max-width: 1024px) {
     font-size: 20px;
   }
 }
+
+.fact-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 10px;
+}
+
+.fact-box {
+  font-family: var(--heading);
+  font-weight: 500;
+  color: var(--text-h);
+  font-size: 24px;
+  line-height: 118%;
+  letter-spacing: -0.24px;
+  padding: 12px 28px;
+  width: 500px;
+  border-radius: 12px;
+  background: #f9a8d4;
+  border-bottom: 5px solid #e879a0;
+  box-shadow: 0 5px 0 #A76D88;
+  text-align: center;
+
+  @media (max-width: 1024px) {
+    font-size: 20px;
+  }
+}
+
 p {
   margin: 0;
 }

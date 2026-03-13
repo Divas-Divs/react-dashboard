@@ -10,6 +10,11 @@ function App() {
   return (
     <>
       <h1>Trivia Diva</h1>
+      <h2>Today's fun fact:</h2>
+      <div className="fact-container">
+        <div className="fact-box">Placeholder fact 1</div>
+        <div className="fact-box">Placeholder fact 2</div>
+      </div>
       <section id="center">
         <div className="hero">
           <img src={heroImg} className="base" width="170" height="179" alt="" />
