@@ -16,6 +16,7 @@ function App() {
       <Facts />
       <div className="fact-container">
         <DateInfo />
+        <TriviaGame />
       </div>
       <section id="center">
         <div className="hero">

@@ -1,33 +1,20 @@
-const TRIVIA_API_URL_BASE = 'https://opentdb.com/api.php'
+const apiKey = import.meta.env.VITE_TRIVIA_API_KEY;
 
-function getCategoryForToday(){
-    const day = new Date().getDay();
+export async function fetchTodaysTrivia() {
+  try {
+    const response = await fetch("https://api.api-ninjas.com/v1/triviaoftheday", {
+    headers: { "X-Api-Key": apiKey }
+  });
 
-    const categoriesByDay = {
-        0: 15, //Sunday - Video Games
-        1: 20, // Monday - Mythology
-        2: 17, // Tuesday - Science
-        3: 23, // Wednesday - History
-        4: 21, // Thursday - Sports
-        5: 27, // Friday - Animals
-        6: 26  // Saturday - Celebrities
+    if (!response.ok) {
+      throw new Error("Trivia fetch failed: " + response.status);
     }
 
-    return categoriesByDay[day];
-}
+    const data = await response.json();
 
-export async function fetchTrivia() {
-    const category = getCategoryForToday();
-    
-    try {
-        const response = await fetch(
-        `${TRIVIA_API_URL_BASE}?amount=5&category=${category}`
-        );
-        const data = await response.json();
-        return data.results;
-    } catch (error) {
-        console.error("Failed to fetch trivia:", error);
-        throw error;
-    }
- 
+    return data[0];
+  } catch (err) {
+    console.error("Error fetching trivia of the day:", err);
+    return null;
+  }
 }
