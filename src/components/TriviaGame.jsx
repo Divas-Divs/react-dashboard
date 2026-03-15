@@ -3,6 +3,7 @@ import { fetchTodaysTrivia } from "../api/triviaApi";
 
 export default function TriviaGame() {
   const [trivia, setTrivia] = useState(null);
+  const [showAnswer, setShowAnswer] = useState(false);
 
   useEffect(() => {
     async function loadTrivia() {
@@ -17,9 +18,11 @@ export default function TriviaGame() {
   return (
     <div className="fact-box">
       <h3>Trivia of the Day</h3>
-      <p>{trivia.question}</p>
+      <p className="trivia-question">{trivia.question}</p>
 
-      <p className="trivia-answer">{trivia.answer}</p>
+      <button className="trivia-answer" onClick={() => setShowAnswer(true)}>
+        {showAnswer ? trivia.answer : 'Click to reveal answer'}
+      </button>
     </div>
   );
 }

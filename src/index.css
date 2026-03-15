@@ -92,7 +92,7 @@ h2 {
   display: flex;
   gap: 20px;
   justify-content: center;
-  margin: 10px;
+  margin: 40px 10px 10px;
 }
 
 .fact-box {
@@ -126,6 +126,31 @@ h2 {
 .fact-box p {
   margin: 0;
   text-align: left;
+  line-height: 2;
+}
+
+.trivia-question {
+  margin-bottom: 20px;
+}
+
+.trivia-answer {
+  margin: 20px auto 0;
+  font-family: var(--heading);
+  font-weight: 500;
+  color: var(--text-h);
+  padding: 10px 20px;
+  border: 2px solid #e879a0;
+  background: #f9a8d4;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: box-shadow 0.3s;
+  display: block;
+  box-shadow: 4px 5px 0 #A76D88;
+}
+
+.trivia-answer:hover {
+  box-shadow: 6px 7px 0 #A76D88;
 }
 
 p {
